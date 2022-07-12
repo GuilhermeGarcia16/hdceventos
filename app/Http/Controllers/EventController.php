@@ -34,6 +34,8 @@ class EventController extends Controller
         else{
             $new_event->image = "default.png";
         }
+        
+        $new_event->items = $request->items;
         $new_event->save();
 
         return redirect('/')->with('msg', 'Evento criado com sucesso!');
@@ -42,7 +44,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
-
+        
         return view('events.show',['event' => $event]);
     }
 }

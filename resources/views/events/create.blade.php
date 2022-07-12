@@ -21,6 +21,24 @@
       </textarea>
     </div>
     <div class="form-group">
+      <label for="description">Adicione itens de infraestrutura:</label>
+      <div class="form-group">
+        <input type="checkbox" name="items[]" value="Cadeiras" /> Cadeiras
+      </div>
+      <div class="form-group">
+        <input type="checkbox" name="items[]" value="Palco" /> Palco
+      </div>
+      <div class="form-group">
+        <input type="checkbox" name="items[]" value="Open Bar" /> Open Bar
+      </div>
+      <div class="form-group">
+        <input type="checkbox" name="items[]" value="Open food" /> Open food
+      </div>
+      <div class="form-group">
+        <input type="checkbox" name="items[]" value="Brindes" /> Brindes
+      </div>
+    </div>
+    <div class="form-group">
       <label for="">Cidade:</label>
       <input type="text" class="form-control" id="city" name="city" placeholder="Cidade">
     </div>
