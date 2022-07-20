@@ -9,8 +9,11 @@ class Event extends Model
 {
     use HasFactory; 
 
+    protected $fillable = ['title', 'city', 'description', 'private'];
     protected $casts = [
         'items'=>'array'
     ];
-
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

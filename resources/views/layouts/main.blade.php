@@ -29,11 +29,36 @@
                             <ion-icon name="add-outline"></ion-icon>
                             </a>
                         </li>
+                        @auth
+                            <li class="nav-item">
+                                <a href="/dashboard" class="nav-link">Meus eventos
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                               <form action="/logout" method="POST">
+                                @csrf
+                                <a href="/logout" 
+                                class="nav-link" 
+                                onclick="event.preventDefault(); this.closest('form').submit();"
+                                >
+                                Sair</a>
+                               </form>
+                                </a>
+                            </li>
+                        @endauth
+                        @guest
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Cadastrar
+                            <a href="/login" class="nav-link">Entrar
                             <ion-icon name="checkmark-circle-outline"></ion-icon>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/register" class="nav-link">Cadastrar
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            </a>
+                        </li>
+                        @endguest
                     </ul>
                 </a>
             </div>
